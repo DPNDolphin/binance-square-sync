@@ -1,0 +1,14 @@
+{
+  "_说明": "复制这个文件为 config.json 后填写。config.json 已在 .gitignore 里,不会被提交。",
+
+  "x_bearer_token": "从 developer.x.com 的 Keys & Tokens 页面拿 Bearer Token(只需要这一个)",
+  "x_user_id": "你的 X 数字 ID(不是 @用户名)。拿法见 README 第二步",
+  "square_api_key": "币安广场创作者中心生成的 API Key",
+
+  "state_file": "square_sync_state.json",
+
+  "_以下都是可选项": "",
+  "skip_replies": true,
+  "skip_retweets": true,
+  "append_source_link": false
+}
