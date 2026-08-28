@@ -158,7 +158,7 @@ Register-ScheduledTask -TaskName "SquareSync" -Action $action `
     <string>--config</string>
     <string>/path/to/binance-square-sync/config.json</string>
   </array>
-  <key>WorkingDirectory</key><string>/path/to/square-sync</string>
+  <key>WorkingDirectory</key><string>/path/to/binance-square-sync</string>
   <key>StartInterval</key><integer>300</integer>
   <key>RunAtLoad</key><true/>
   <key>StandardOutPath</key><string>/tmp/squaresync.log</string>
