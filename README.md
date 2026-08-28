@@ -12,7 +12,7 @@ python3 square_sync.py --config config.json
 ## 为什么又造一个轮子
 
 网上流传的同步脚本大同小异:`while True` 里每 5 分钟拉一次推文,发到广场。
-能跑,但有三个地方会真出事。我们自己用这套 API 发了三个月广场帖,这三个都撞过。
+能跑,但有三个地方会真出事。这三个我们自己都撞过。
 
 ### 坑一:第一次运行会把历史推文一次性倒进广场
 
@@ -154,9 +154,9 @@ Register-ScheduledTask -TaskName "SquareSync" -Action $action `
   <key>ProgramArguments</key>
   <array>
     <string>/usr/bin/python3</string>
-    <string>/path/to/square-sync/square_sync.py</string>
+    <string>/path/to/binance-square-sync/square_sync.py</string>
     <string>--config</string>
-    <string>/path/to/square-sync/config.json</string>
+    <string>/path/to/binance-square-sync/config.json</string>
   </array>
   <key>WorkingDirectory</key><string>/path/to/square-sync</string>
   <key>StartInterval</key><integer>300</integer>
@@ -184,7 +184,7 @@ crontab -e
 加一行:
 
 ```
-*/5 * * * * cd /path/to/square-sync && /usr/bin/python3 square_sync.py --config config.json >> sync.log 2>&1
+*/5 * * * * cd /path/to/binance-square-sync && /usr/bin/python3 square_sync.py --config config.json >> sync.log 2>&1
 ```
 
 > 如果日志里出现 `command not found`,在 crontab **第一行**加上 PATH:
